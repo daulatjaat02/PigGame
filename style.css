@@ -11,7 +11,7 @@ body {
 main {
   position: relative;
   display: flex;
-  backdrop-filter: blur(200px);
+  /* backdrop-filter: blur(200px); */
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -39,6 +39,10 @@ section {
   min-height: 80vh;
 }
 .current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 18vh;
   font-size: 23px;
   padding: -23px;
@@ -46,7 +50,7 @@ section {
   text-align: center;
   color: white;
   border-radius: 23px;
-  background-color: rgb(157, 66, 82);
+  background-color: rgb(133, 84, 64);
 }
 img {
   height: 70px;
@@ -124,4 +128,33 @@ img {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    width: 45vw;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .score {
+    font-size: 2rem;
+  }
+  .current {
+    width: 25vw;
+    font-size: 1rem;
+  }
+  .btnRoll {
+    top: 22vh;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  .btnHold {
+    top: 78vh;
+  }
 }
